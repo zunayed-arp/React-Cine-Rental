@@ -6,7 +6,7 @@ import Sidebar from "./components/Sidebar";
 import { MovieContext } from "./context";
 
 function App() {
-  const { cartData, setCartData } = useState([]);
+  const [cartData, setCartData] = useState([]);
 
   return (
     <>
