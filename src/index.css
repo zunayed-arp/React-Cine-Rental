@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #00d991;
+  --container-padding: 1.25rem;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    /* Add dark mode overrides here if needed */
+    /* Example: --color-primary: #009F6B; */
+  }
+}
+
+:root.dark {
+  --color-primary: #009f6b;
+}
+
+/* Use your custom color/utility in React components:
+   <div className="bg-[var(--color-primary)]" />
+   <div className="container" />
+*/
