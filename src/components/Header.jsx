@@ -10,7 +10,6 @@ export default function Header() {
   const [showCart, setShowCart] = useState(false);
 
   const { cartData } = useContext(MovieContext);
-  console.log(cartData);
 
   const handleCartShow = () => {
     setShowCart(true);
