@@ -2,35 +2,16 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme{
-  --color-primary: #3b82f6
-  --color-primary-dark: #0d0d0d
-}
-
 @theme {
+  /*Color*/
   --color-primary: #00d991;
-  --container-padding: 1.25rem;
-}
- 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
+  --color-dark: #171923;
+
+  /*Fonts*/
+  --font-sora: "Sora", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  @theme {
-    /* Add dark mode overrides here if needed */
-    /* Example: --color-primary: #009F6B; */
-  }
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.25rem;
 }
-
-:root.dark {
-  --color-primary: #009f6b;
-}
-
-/* Use your custom color/utility in React components:
-   <div className="bg-[var(--color-primary)]" />
-   <div className="container" />
-*/
