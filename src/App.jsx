@@ -4,6 +4,8 @@ import { MovieContext, ThemeContext } from "./context";
 import Page from "./Page";
 import { cartReducer, initialState } from "./reducers/cartReducer";
 
+import { ToastContainer } from "react-toastify";
+
 function App() {
   const [cartData, setCartData] = useState([]);
   const [darkMode, setDarkMode] = useState(true);
@@ -24,6 +26,7 @@ function App() {
       <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
         <MovieContext.Provider value={{ cartData, setCartData }}>
           <Page />
+          <ToastContainer />
         </MovieContext.Provider>
       </ThemeContext.Provider>
     </>
